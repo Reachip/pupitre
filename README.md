@@ -16,10 +16,18 @@ mobile capable d'orchestrer le pupitre et l'ascenseur.
 * RPi.GPIO 
 * omxplayer-wrapper
 
+```bash
+sudo pip3 install pyserial RPi.GPIO omxplayer-wrapper 
+```
+
 ### Sur le Raspberry PI cible 
 * Python >= 3.5
 * omxplayer
 
+```bash
+sudo apt update; sudo apt upgrade 
+sudo apt install omxplayer python3
+```
 # Installation 
 
 ```bash 
