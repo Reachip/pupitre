@@ -1,9 +1,7 @@
-import os
 import json
 import time
 import logging
 from logging.handlers import RotatingFileHandler
-import random
 from pathlib import Path
 
 from omxplayer.player import OMXPlayer
