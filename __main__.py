@@ -10,7 +10,7 @@ from omxplayer.player import OMXPlayer
 import RPi.GPIO as GPIO
 
 from core import event
-from core import leds
+from core import light
 
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
@@ -57,14 +57,14 @@ def with_sound_and_led():
     logger.info("jouer le son et animer les lumières demandé")
     path = Path(json_datas["music_path"])
     OMXPlayer(path)
-    leds.animation(5, json_datas["leds_handlers"])
+    light.animation(5, json_datas["leds_handlers"])
     logger.info("jouer le son et animer les lumières fini")
 
 
 @event.on_with_leds
 def with_leds():
     logger.info("animer les lumières")
-    leds.animation(5, json_datas["leds_handlers"])
+    light.animation(5, json_datas["leds_handlers"])
     logger.info("animer les lumières fini")
 
 
