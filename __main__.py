@@ -13,7 +13,7 @@ from core import leds
 event = event.Event()
 event.start()
 
-with open(os.getcwd() + "/pypitre/config.json") as json_file: 
+with open(os.getcwd() + "/pupitre/config.json") as json_file: 
     global json_datas
     json_datas = json.load(json_file)
 
