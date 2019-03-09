@@ -1,4 +1,4 @@
 {
-    "leds_handlers": [16, 20, 21], 
+    "leds_handlers": [17, 20, 21], 
     "music_path": "/home/pi/buzzer.mp3" 
 }
