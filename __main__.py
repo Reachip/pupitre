@@ -54,36 +54,18 @@ def with_just_sound():
 
 @event.on_with_sound_and_leds
 def with_sound_and_led():
-    logger.info("jouer le son et allumer les lumières demandé")
+    logger.info("jouer le son et animer les lumières demandé")
     path = Path(json_datas["music_path"])
     OMXPlayer(path)
-
-    for loop in range(5):
-        for handler in json_datas["leds_handlers"]:
-            GPIO.output(handler, GPIO.LOW)
-            time.sleep(0.1)
-
-        for handler in reversed(json_datas["leds_handlers"]):
-            GPIO.output(handler, GPIO.HIGH)
-            time.sleep(0.1)
-
-    logger.info("jouer le son et allumer les lumières fini")
+    leds.animation(5, json_datas["leds_handlers"])
+    logger.info("jouer le son et animer les lumières fini")
 
 
 @event.on_with_leds
 def with_leds():
-    logger.info("allumer les lumières")
-
-    for loop in range(5):
-        for handler in json_datas["leds_handlers"]:
-            GPIO.output(handler, GPIO.LOW)
-            time.sleep(0.1)
-
-        for handler in reversed(json_datas["leds_handlers"]):
-            GPIO.output(handler, GPIO.HIGH)
-            time.sleep(0.1)
-
-    logger.info("allumer les lumières fini")
+    logger.info("animer les lumières")
+    leds.animation(5, json_datas["leds_handlers"])
+    logger.info("animer les lumières fini")
 
 
 event.join()
