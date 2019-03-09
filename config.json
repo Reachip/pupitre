@@ -1,4 +1,5 @@
 {
     "leds_handlers": [17, 20, 21], 
-    "music_path": "/home/pi/buzzer.mp3" 
+    "music_path": "/home/pi/buzzer.mp3",
+    "animation_iterations": 5 
 }

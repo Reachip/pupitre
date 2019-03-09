@@ -64,7 +64,7 @@ def with_sound_and_led():
 @event.on_with_leds
 def with_leds():
     logger.info("animer les lumières")
-    light.animation(5, json_datas["leds_handlers"])
+    light.animation(json_datas["animation_iterations"], json_datas["leds_handlers"])
     logger.info("animer les lumières fini")
 
 
